@@ -7,13 +7,13 @@ function profileStandard(countOfInserts) {
         doc.x = []
     })
 
-    console.time(`profile ${countOfInserts} inserts`)
+    console.time(`automerge profile ${countOfInserts} inserts`)
     for (let i = 0; i < countOfInserts; i++) {
         doc = Automerge.change(doc, '', doc => {
             doc.x.push(i)
         })
     }
-    console.timeEnd(`profile ${countOfInserts} inserts`)
+    console.timeEnd(`automerge profile ${countOfInserts} inserts`)
 }
 
 function profileHot(countOfInserts) {
@@ -22,13 +22,13 @@ function profileHot(countOfInserts) {
         doc.x = []
     })
 
-    console.time(`profile ${countOfInserts} inserts`)
+    console.time(`hot-automerge profile ${countOfInserts} inserts`)
     for (let i = 0; i < countOfInserts; i++) {
         doc = HotAutomerge.change(doc, '', doc => {
             doc.x.push(i)
         })
     }
-    console.timeEnd(`profile ${countOfInserts} inserts`)
+    console.timeEnd(`hot-automerge profile ${countOfInserts} inserts`)
 }
 
 profileStandard(10000)
