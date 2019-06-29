@@ -2,7 +2,7 @@
 
 This tests a fork of [Automerge](https://github.com/automerge/automerge?files=1) without the use of `Object.freeze`. This fork is located under `node_modules/hot-automerge`. Run with `yarn start` or `npm run start`.
 
-After removing calls to `Object.freeze` from `automerge` (`hot-automerge`), testing 0,000 inserts on my 2012 Retina MacBook Pro (2.3 GHz i7, 8GB RAM) I get:
+After removing calls to `Object.freeze` from `automerge` (`hot-automerge`), testing 10,000 inserts on my 2012 Retina MacBook Pro (2.3 GHz i7, 8GB RAM) I get:
 
 ```
 automerge profile 10000 inserts: 55546.893ms
