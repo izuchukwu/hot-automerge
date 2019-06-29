@@ -11,7 +11,7 @@ hot-automerge profile 10000 inserts: 4051.241ms
 
 which gives 55s using `Object.freeze` vs. 4s without it—a ~90% performance improvement. Repeated runs gave similar results, as did changing the order of the tests.
 
-### Object.freeze Performance
+### Notes
 
 A very rudimentary test on the performance impact of `Object.freeze` is available on JSPerf [here](https://jsperf.com/freeze-vs-seal-vs-normal/27). JSPerf gave a roughly 42-47% slowdown using a single `Object.freeze` call.
 
